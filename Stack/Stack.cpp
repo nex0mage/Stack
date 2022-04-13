@@ -13,6 +13,8 @@ int main()
 	read.open("c:\\Users\\trace\\source\\repos\\Stack\\Stackread.txt");
 	out.open("c:\\Users\\trace\\source\\repos\\Stack\\Out.txt");
 
+
+//Проверка, открывается ли файл.
 	if (!read)
 	{
 		cout << "Файл не открыт!" << endl;
@@ -21,7 +23,7 @@ int main()
 	{
 		cout << "Файл открыт!" << endl;
 	}
-
+//Заполнение стека числами из файла.
 	stack <int> stack;
 	while (!read.eof())
 	{
@@ -29,10 +31,11 @@ int main()
 		cout << a << " ";
 		stack.push(a);
 	}
-	cout << endl;;
+	cout << endl;
+//Выбор вывода четных или нечетных чисел.
 	cout << "1 - нечетн, 2 - четн: ";
 	cin >> b;
-	
+//Сортировка чисел по четности на выбор и ввод отсортированного в файл.
 	switch (b) 
 	{
 	case 1:
